@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.dam.tareas.controller.TareasController">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Filtro" />
+            <ComboBox fx:id="comboFiltro" prefHeight="26.0" prefWidth="164.0" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tabla" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colTitulo" prefWidth="75.0" text="Título" />
+          <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha" />
+            <TableColumn fx:id="colEstado" prefWidth="75.0" text="Estado" />
+            <TableColumn fx:id="colPrioridad" prefWidth="75.0" text="Prioridad" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="8.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="btnNueva" mnemonicParsing="false" onAction="#onNueva" text="+ Nuevo" />
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#onEditar" text="Editar" />
+            <Button fx:id="btnHecha" mnemonicParsing="false" onAction="#onHecha" text="Marcar hecha" />
+            <Button fx:id="btnManiana" mnemonicParsing="false" onAction="#onManiana" text="Dejar mañana" />
+            <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#onBorrar" text="Eliminar" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
